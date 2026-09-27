@@ -15,7 +15,15 @@ Published versions are immutable. Never move or reuse a release tag.
 
 ```bash
 swift package dump-package >/dev/null
-swift test
+
+xcrun simctl list devices available
+SIMULATOR_ID="<available-iOS-simulator-UUID>"
+
+xcodebuild \
+  -scheme Biqli \
+  -destination "platform=iOS Simulator,id=$SIMULATOR_ID" \
+  -derivedDataPath .build/test \
+  test
 
 xcodebuild \
   -scheme Biqli \
