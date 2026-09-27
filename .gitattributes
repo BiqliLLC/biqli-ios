@@ -1,0 +1,15 @@
+* text=auto
+*.json text eol=lf
+*.md text eol=lf
+*.pbxproj text eol=lf
+*.plist text eol=lf
+*.swift text eol=lf
+*.xcprivacy text eol=lf
+*.xcworkspacedata text eol=lf
+*.jpg binary
+*.jpeg binary
+*.png binary
+
+/.github export-ignore
+/.gitignore export-ignore
+/RELEASING.md export-ignore
